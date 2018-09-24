@@ -1,0 +1,43 @@
+Guilford County Assignment
+
+Question 1. Which brewery produces the strongest beers by ABV%?
+
+Solution : Schorschbräu
+We have grouped the data by "brewery_name" and then took the 
+mean of beer_abv and get the brewery name which has highest percentage of
+beer_abv in mean.
+
+
+Question 2. If you had to pick 3 beers to recommend using only this data, 
+which would you pick?
+Solution : 
+First beer to recommend : Erdinger Weissbier Alkoholfrei
+Second beer to recommend : Old Rasputin Russian Imperial Stout
+Third beer to recommend : Sink The Bismarck!
+
+To recommand the beers, I will select all the beers which got 5 
+rating in all review_aroma, review_appearance, review_taste, review_palate,
+review_overall. Then first beer to recommend is with minimum ABV % and 
+Second is with mean ABV% and Third is with maximum ABV%.
+
+
+Question 3. Which of the factors (aroma, taste, appearance, palette) are most 
+important in determining the overall quality of a beer?
+Solution : 
+review_palate:       25.87%
+review_taste:        25.09%
+review_appearance:   25.03%
+review_aroma:        24.01%   
+
+To check the importance for factors in determining the overall quality of a beer
+, we apply XGBRegressor model and gives us feature importance.
+ It gives us graph showing importance of factors.
+
+Question 4. Lastly, if I typically enjoy a beer due to its aroma and appearance, 
+which beer style should I try?
+Solution : You should try : American Double / Imperial Stout
+
+To suggest a beer style based on aroma and appearance, We have select all observations
+with maximum rating for aroma and appearance and select the beer style which got 
+maximum number of reviews.
+
